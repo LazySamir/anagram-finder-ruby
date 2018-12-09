@@ -30,3 +30,25 @@ Solver
 
 Printer
 -> show_anagrams
+
+### How to use
+
+##### Download the app
+```
+$ git clone git@github.com:LazySamir/anagram-solver-ruby.git
+$ cd anagram-solver-ruby
+$ bundle
+```
+
+##### Run the app
+```
+$ cd anagram-solver-ruby
+$ irb
+$ require './lib/solver.rb'
+$ solver = Solver.new
+$ solver.find_anagrams('ate')
+```
+
+##### Run tests
+
+`$ rspec`
