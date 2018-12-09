@@ -20,6 +20,6 @@ class Solver
   private
   
   def normalise(word)
-    word.downcase.chars.sort.join.gsub(/-/, '')
+    word.downcase.chars.sort.join.gsub(/-|'/, '')
   end
 end

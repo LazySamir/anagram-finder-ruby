@@ -18,10 +18,16 @@ describe "solver" do
         expect(solver.anagrams).to eq(['Elephant', 'phaNteLe', 'elphAnte'])
       end
       
-      it "shows anagrams with hyphens character" do
+      it "shows anagrams with hyphens" do
         solver.find_anagrams('dog')
 
         expect(solver.anagrams).to eq(['d-og', 'go-d', 'od-g'])
+      end
+      
+      it "shows anagrams with apostrophes" do
+        solver.find_anagrams('cats')
+
+        expect(solver.anagrams).to eq(["cat\'s", "ac\'st", "sat\'c"])
       end
     end
  end
