@@ -17,5 +17,11 @@ describe "solver" do
         
         expect(solver.anagrams).to eq(['Elephant', 'phaNteLe', 'elphAnte'])
       end
+      
+      it "shows anagrams with hyphens character" do
+        solver.find_anagrams('dog')
+
+        expect(solver.anagrams).to eq(['d-og', 'go-d', 'od-g'])
+      end
     end
  end
