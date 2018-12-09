@@ -12,8 +12,14 @@ class Solver
     
   def find_anagrams(word)
     File.foreach(@word_list) do |list_word| 
-      anagrams << list_word.strip if ((word.chars.sort.join) == (list_word.chars.sort.join.strip)) 
+      anagrams << list_word.strip if ((normalise(word)) == (normalise(list_word).strip))
     end
     @printer.show_anagrams(word, anagrams)
+  end
+  
+  private
+  
+  def normalise(word)
+    word.chars.sort.join
   end
 end
