@@ -11,6 +11,7 @@ class Solver
   end
     
   def find_anagrams(word)
+    anagrams.clear
     File.foreach(@word_list) do |list_word| 
       anagrams << list_word.strip if ((normalise(word)) == (normalise(list_word).strip))
     end
